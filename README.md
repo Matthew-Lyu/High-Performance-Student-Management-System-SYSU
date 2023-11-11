@@ -13,7 +13,9 @@ This documentation outlines the completion of the third assignment for the C++ c
 - [Usage](#usage)
 - [File Structure](#file-structure)
 - [Classes and Functions](#classes-and-functions)
+- [Implemented Functionalities and Functions](#implemented-functionalities-and-functions)
 - [Example Usage](#example-usage)
+- [Project Highlights](#project-highlights)
 
 ## Usage
 
@@ -21,82 +23,243 @@ The program reads student information from two input files: `StudentCourse.txt` 
 
 ## File Structure
 
-- `main.cpp`: Contains the main program logic, class definitions, and example usage.
-- `StudentCourse.txt`: Input file containing student course information.
-- `StudentInfo.txt`: Input file containing student personal information.
-- `result.txt`: Output file storing the results of queries and tests.
+The project consists of two files:
+
+- `StudentManageSys.h`: Header file containing class declarations, structure definitions, and function prototypes.
+- `StudentManageSys.cpp`: Implementation file containing the actual implementation of the functions declared in the header file.
 
 ## Classes and Functions
 
-### `Date` Class
+### 1. `StudentManageSys.h`
 
-The `Date` class is responsible for representing dates and includes methods for parsing date strings and comparing dates. The class is used for handling student birthdates, allowing for easy comparison and manipulation.
+#### Contents:
 
-- **Attributes:**
-  - `year`: An integer representing the year.
-  - `month`: An integer representing the month.
-  - `day`: An integer representing the day.
+- **Date Class**: Represents the date of birth, providing functionality to parse a date string.
+  
+```cpp
+class Date {
+    // ...
+};
+```
 
-- **Methods:**
-  - `Date()`: Default constructor.
-  - `explicit Date(const std::string& date_str)`: Constructor that takes a date string (in the format "YYYY/MM/DD") and initializes the `Date` object.
-  - `operator<<`: Overloaded output stream operator to facilitate easy printing of `Date` objects.
-  - `operator>`: Overloaded greater-than operator for comparing two `Date` objects.
+- **StudentInfo Structure**: Contains personal information about a student.
 
-### `StudentInfo` Struct
+```cpp
+struct StudentInfo {
+    std::string name;
+    std::string sex;
+    Date birthday{};
+    std::string schoolYear;
+    std::string birthplace;
+};
+```
 
-The `StudentInfo` struct holds personal information about a student, such as name, sex, birthday, school year, and birthplace. This structure is used to organize and store individual student data.
+- **CourseData Structure**: Stores information about a student's course.
 
-- **Attributes:**
-  - `name`: A string representing the student's name.
-  - `sex`: A string representing the student's gender.
-  - `birthday`: An instance of the `Date` class representing the student's birthdate.
-  - `schoolYear`: A string representing the student's school year.
-  - `birthplace`: A string representing the student's birthplace.
+```cpp
+struct CourseData {
+    double credits;
+    double score;
+};
+```
 
-### `CourseData` Struct
+- **StudentCourse Type**: An unordered map representing a student's course information.
 
-The `CourseData` struct stores information about a student's performance in a particular course, including the number of credits and the score obtained. This structure is utilized for organizing course-specific data.
+```cpp
+typedef std::unordered_map<std::string, CourseData> StudentCourse;
+```
 
-- **Attributes:**
-  - `credits`: A double representing the number of credits for the course.
-  - `score`: A double representing the student's score in the course.
+- **StudentManageSys Class**: The main class representing the student management system.
 
-### `StudentCourse` Typedef
+```cpp
+class StudentManageSys {
+    // ...
+};
+```
 
-The `StudentCourse` typedef is an unordered map associating course names with `CourseData` structures. This data structure is used to store a student's performance in various courses.
+- **Comparator Functions**: Various comparator functions for sorting students based on different criteria.
 
-### `Compare` Functions
+```cpp
+bool CompareById(const std::pair<std::string, std::pair<StudentInfo, StudentCourse>>& p1, const std::pair<std::string, std::pair<StudentInfo, StudentCourse>>& p2);
+// ... Other comparator functions
+```
 
-Several comparator functions are defined for sorting students based on different criteria. These functions are utilized in the sorting functionality of the `StudentManageSys` class.
+### 2. `StudentManageSys.cpp`
 
-- `CompareById`: Compares students based on their ID.
-- `CompareByName`: Compares students based on their names.
-- `CompareByBirthday`: Compares students based on their birthdates.
-- `CompareBySchoolYear`: Compares students based on their school years.
-- `CompareByCppScore`, `CompareByMathScore`, `CompareByEngScore`, `CompareByConScore`, `CompareByPyScore`: Compare students based on scores in specific courses.
-- `CompareByTotalScore`: Compares students based on their total scores across all courses.
+#### Contents:
 
-### `StudentManageSys` Class
+- **Implementation of Date Class Overloads**: Overloaded operators for date comparison.
 
-The `StudentManageSys` class is the main class responsible for managing student information. It includes methods for reading data from files, printing student information, sorting students, and performing various queries.
+```cpp
+std::ostream &operator<<(std::ostream &os, Date date);
+bool operator>(Date date1, Date date2);
+```
 
-- **Attributes:**
-  - `StuDict`: A map associating student IDs with pairs of `StudentInfo` and `StudentCourse` structures.
+- **Comparator Function Implementations**: Implementations of comparator functions for sorting students.
 
-- **Methods:**
-  - `StudentManageSys(std::ifstream& fin1, std::ifstream& fin2)`: Constructor that initializes the class by reading data from two input files (`StudentCourse.txt` and `StudentInfo.txt`).
-  - `Print(const std::string& id_)`: Prints information for a specific student based on their ID.
-  - `PrintAll()`: Prints information for all students.
-  - `Sort(Compare comp)`: Sorts and prints students based on the specified comparator function.
-  - `FindStuInfoInRange(const std::string& course, double minScore, double maxScore)`: Finds and prints students whose scores in a specific course fall within a given range.
-  - `AverageScore(const std::string& id_)`: Calculates and returns the average score of a student based on their ID.
-  - `FindStuInfoByConditions(const std::function<bool(const std::pair<std::string, std::pair<StudentInfo, StudentCourse>>&)>& cond)`: Finds and prints students based on a given condition using a boolean function pointer.
-  - `FindStuInfoByConditions2(const std::function<bool(const std::pair<std::string, std::pair<StudentInfo, StudentCourse>>&)>& cond, std::vector<std::string>& res)`: A specialized version of the above function, which also returns the results.
-  - `RemoveStuInfoByConditions(const std::function<bool(const std::pair<std::string, std::pair<StudentInfo, StudentCourse>>&)>& cond)`: Removes students based on a given condition.
-  - `Test(std::ofstream& file)`: Performs various tests and writes results to a file.
+```cpp
+bool CompareById(const std::pair<std::string, std::pair<StudentInfo, StudentCourse>> &p1, const std::pair<std::string, std::pair<StudentInfo, StudentCourse>> &p2) {
+    return p1.first < p2.first;
+}
+// ... Other comparator function implementations
+```
 
-These classes and functions collectively form a comprehensive student management system with features for data organization, sorting, querying, and testing.
+- **StudentManageSys Class Implementation**: Methods for printing, sorting, finding students, calculating average scores, and more.
+
+```cpp
+void StudentManageSys::Sort(Compare comp) {
+    // ...
+}
+
+void StudentManageSys::FindStuInfoInRange(const std::string &course, double minScore, double maxScore) {
+    // ...
+}
+
+double StudentManageSys::AverageScore(const std::string &id_) {
+    // ...
+}
+
+// ... Other method implementations
+```
+
+- **Main Function**: A main function demonstrating the usage of implemented functionalities.
+
+```cpp
+int main() {
+    // ...
+}
+```
+
+## Project Highlights
+
+### Clever Use of Unordered Map
+
+The project cleverly uses `std::unordered_map` to store a student's course information, where the course name serves as the key, and the value is a `CourseData` structure. This choice allows for efficient lookups and modifications of a student's course data.
+
+```cpp
+typedef std::unordered_map<std::string, CourseData> StudentCourse;
+```
+
+### Multi-Condition Queries
+
+The project implements a flexible system for multi-condition queries using function pointers. This allows users to define their custom conditions for finding, removing, or processing student information.
+
+```cpp
+void FindStuInfoByConditions(const std::function<bool(const std::pair<std::string, std::pair<StudentInfo, StudentCourse>>&)>& cond);
+```
+
+### Sorting with Templates
+
+The sorting function `Sort` uses a template to accept different comparator functions, enabling the sorting of students based on various criteria.
+
+```cpp
+template<typename Compare>
+void Sort(Compare comp);
+```
+
+### Example Commands in Main Function
+
+The main function showcases the usage of the implemented functionalities, including sorting students, finding students within a score range, performing multi-condition queries, and removing students based on specific conditions.
+
+```cpp
+int main() {
+    // ...
+}
+```
+## Implemented Functionalities and Functions
+
+### 1. **File Input and Initialization**
+
+- **Function:**
+  ```cpp
+  StudentManageSys::StudentManageSys(std::ifstream& fin1, std::ifstream& fin2);
+  ```
+- **Description:**
+  Reads data from two input files (`StudentCourse.txt` and `StudentInfo.txt`) to initialize the Student Management System. The data includes information about students' courses and personal details.
+
+### 2. **Print Student Information**
+
+- **Function:**
+  ```cpp
+  void StudentManageSys::Print(const std::string& id_);
+  ```
+- **Description:**
+  Prints detailed information about a student identified by their student ID.
+
+### 3. **Print All Student Information**
+
+- **Function:**
+  ```cpp
+  void StudentManageSys::PrintAll();
+  ```
+- **Description:**
+  Prints detailed information about all students in the system.
+
+### 4. **Sort Students Based on Various Criteria**
+
+- **Function:**
+  ```cpp
+  template<typename Compare>
+  void StudentManageSys::Sort(Compare comp);
+  ```
+- **Description:**
+  Sorts and prints students based on different criteria specified by the comparator function provided as a template argument. Criteria include sorting by ID, name, birthday, school year, individual course scores, and total scores.
+
+### 5. **Find Students with Scores in a Given Range**
+
+- **Function:**
+  ```cpp
+  void StudentManageSys::FindStuInfoInRange(const std::string& course, double minScore, double maxScore);
+  ```
+- **Description:**
+  Searches for and prints students who achieved scores in a specified range for a particular course.
+
+### 6. **Calculate Average Score for a Student**
+
+- **Function:**
+  ```cpp
+  double StudentManageSys::AverageScore(const std::string& id_);
+  ```
+- **Description:**
+  Calculates and returns the average score of a student across all courses.
+
+### 7. **Query Students Based on Custom Conditions**
+
+- **Functions:**
+  ```cpp
+  void StudentManageSys::FindStuInfoByConditions(const std::function<bool(const std::pair<std::string, std::pair<StudentInfo, StudentCourse>>&)>& cond);
+  void StudentManageSys::FindStuInfoByConditions2(const std::function<bool(const std::pair<std::string, std::pair<StudentInfo, StudentCourse>>&)>& cond, std::vector<std::string>& res);
+  ```
+- **Description:**
+  - `FindStuInfoByConditions`: Searches for and prints students based on custom conditions specified by a boolean function pointer.
+  - `FindStuInfoByConditions2`: Similar to the above, but additionally stores student IDs in a vector for further processing.
+
+### 8. **Remove Students Based on Custom Conditions**
+
+- **Function:**
+  ```cpp
+  void StudentManageSys::RemoveStuInfoByConditions(const std::function<bool(const std::pair<std::string, std::pair<StudentInfo, StudentCourse>>&)>& cond);
+  ```
+- **Description:**
+  Removes students from the system based on custom conditions specified by a boolean function pointer.
+
+### 9. **Testing Functionality**
+
+- **Function:**
+  ```cpp
+  void StudentManageSys::Test(std::ofstream& file);
+  ```
+- **Description:**
+  Executes a set of predefined tests and writes the results to an output file (`result.txt`). Test cases include finding students with specific criteria and checking if students meet credit requirements.
+
+### 10. **Main Function for Demonstration**
+
+- **Function:**
+  ```cpp
+  int main();
+  ```
+- **Description:**
+  Demonstrates the usage of various functionalities, including initialization, testing, sorting, and querying, in the main function.
 
 ## Example Usage
 
@@ -128,5 +291,21 @@ int main() {
     return 0;
 }
 ```
+
+## Project Highlights
+
+- **Data Storage:**
+  - Utilizes `std::map` to store student information efficiently.
+  - Uses `std::unordered_map` to store course information for quick access.
+
+- **Flexible Sorting:**
+  - Employs template-based sorting, allowing users to define custom comparison functions.
+  - Supports sorting based on various criteria such as ID, name, scores, and total scores.
+
+- **Dynamic Querying:**
+  - Enables users to query students based on custom conditions using function pointers.
+
+- **Comprehensive Testing:**
+  - Includes a testing function to demonstrate the system's capabilities with predefined scenarios.
 
 Feel free to modify and adapt the program to suit your needs.
