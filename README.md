@@ -130,42 +130,6 @@ int main() {
 }
 ```
 
-## Project Highlights
-
-### Clever Use of Unordered Map
-
-The project cleverly uses `std::unordered_map` to store a student's course information, where the course name serves as the key, and the value is a `CourseData` structure. This choice allows for efficient lookups and modifications of a student's course data.
-
-```cpp
-typedef std::unordered_map<std::string, CourseData> StudentCourse;
-```
-
-### Multi-Condition Queries
-
-The project implements a flexible system for multi-condition queries using function pointers. This allows users to define their custom conditions for finding, removing, or processing student information.
-
-```cpp
-void FindStuInfoByConditions(const std::function<bool(const std::pair<std::string, std::pair<StudentInfo, StudentCourse>>&)>& cond);
-```
-
-### Sorting with Templates
-
-The sorting function `Sort` uses a template to accept different comparator functions, enabling the sorting of students based on various criteria.
-
-```cpp
-template<typename Compare>
-void Sort(Compare comp);
-```
-
-### Example Commands in Main Function
-
-The main function showcases the usage of the implemented functionalities, including sorting students, finding students within a score range, performing multi-condition queries, and removing students based on specific conditions.
-
-```cpp
-int main() {
-    // ...
-}
-```
 ## Implemented Functionalities and Functions
 
 ### 1. **File Input and Initialization**
