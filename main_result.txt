@@ -1,0 +1,850 @@
+@————展示排序功能(按照逻辑上的先后关系)————@
+1. 按照id顺序排序:
+学号: 10905
+姓名: xiaomei
+性别: Female
+出生日期: 1999/2/1
+学年: 2021
+出生地: hunan
+课程: Control Theory / 学分: 2 / 分数: 91
+课程: Advanced math / 学分: 4 / 分数: 53
+课程: C Programming Language / 学分: 3 / 分数: 74
+课程: College English / 学分: 3.5 / 分数: 70
+总分为: 288
+
+学号: 10908
+姓名: jianfa
+性别: Male
+出生日期: 1999/7/2
+学年: 2020
+出生地: hunan
+课程: Control Theory / 学分: 2 / 分数: 85
+课程: Advanced math / 学分: 4 / 分数: 80
+课程: C Programming Language / 学分: 3 / 分数: 56
+课程: College English / 学分: 3.5 / 分数: 80
+课程: Python / 学分: 2 / 分数: 96
+总分为: 397
+
+学号: 10914
+姓名: dahong
+性别: Male
+出生日期: 2000/2/3
+学年: 2021
+出生地: guangdong
+课程: Control Theory / 学分: 2 / 分数: 87
+课程: Advanced math / 学分: 4 / 分数: 70
+课程: C Programming Language / 学分: 3 / 分数: 59
+课程: College English / 学分: 3.5 / 分数: 79
+课程: Python / 学分: 2 / 分数: 69
+总分为: 364
+
+学号: 10917
+姓名: xingfeng
+性别: Male
+出生日期: 2000/2/4
+学年: 2020
+出生地: jiangsu
+课程: Control Theory / 学分: 2 / 分数: 88
+课程: Advanced math / 学分: 4 / 分数: 77
+课程: C Programming Language / 学分: 3 / 分数: 73
+课程: College English / 学分: 3.5 / 分数: 90
+课程: Python / 学分: 2 / 分数: 72
+总分为: 400
+
+学号: 10919
+姓名: xiaomi
+性别: Female
+出生日期: 2001/12/5
+学年: 2019
+出生地: beijing
+课程: Control Theory / 学分: 2 / 分数: 86
+课程: Advanced math / 学分: 4 / 分数: 76
+课程: C Programming Language / 学分: 3 / 分数: 91
+课程: College English / 学分: 3.5 / 分数: 83
+课程: Python / 学分: 2 / 分数: 81
+总分为: 417
+
+学号: 10921
+姓名: dabin
+性别: Male
+出生日期: 1998/2/6
+学年: 2018
+出生地: hainan
+课程: Control Theory / 学分: 2 / 分数: 90
+课程: Advanced math / 学分: 4 / 分数: 79
+课程: C Programming Language / 学分: 3 / 分数: 83
+课程: College English / 学分: 3.5 / 分数: 81
+总分为: 333
+
+——————————————————————————————
+2. 按照姓名排序:
+学号: 10921
+姓名: dabin
+性别: Male
+出生日期: 1998/2/6
+学年: 2018
+出生地: hainan
+课程: Control Theory / 学分: 2 / 分数: 90
+课程: Advanced math / 学分: 4 / 分数: 79
+课程: C Programming Language / 学分: 3 / 分数: 83
+课程: College English / 学分: 3.5 / 分数: 81
+总分为: 333
+
+学号: 10914
+姓名: dahong
+性别: Male
+出生日期: 2000/2/3
+学年: 2021
+出生地: guangdong
+课程: Control Theory / 学分: 2 / 分数: 87
+课程: Advanced math / 学分: 4 / 分数: 70
+课程: C Programming Language / 学分: 3 / 分数: 59
+课程: College English / 学分: 3.5 / 分数: 79
+课程: Python / 学分: 2 / 分数: 69
+总分为: 364
+
+学号: 10908
+姓名: jianfa
+性别: Male
+出生日期: 1999/7/2
+学年: 2020
+出生地: hunan
+课程: Control Theory / 学分: 2 / 分数: 85
+课程: Advanced math / 学分: 4 / 分数: 80
+课程: C Programming Language / 学分: 3 / 分数: 56
+课程: College English / 学分: 3.5 / 分数: 80
+课程: Python / 学分: 2 / 分数: 96
+总分为: 397
+
+学号: 10905
+姓名: xiaomei
+性别: Female
+出生日期: 1999/2/1
+学年: 2021
+出生地: hunan
+课程: Control Theory / 学分: 2 / 分数: 91
+课程: Advanced math / 学分: 4 / 分数: 53
+课程: C Programming Language / 学分: 3 / 分数: 74
+课程: College English / 学分: 3.5 / 分数: 70
+总分为: 288
+
+学号: 10919
+姓名: xiaomi
+性别: Female
+出生日期: 2001/12/5
+学年: 2019
+出生地: beijing
+课程: Control Theory / 学分: 2 / 分数: 86
+课程: Advanced math / 学分: 4 / 分数: 76
+课程: C Programming Language / 学分: 3 / 分数: 91
+课程: College English / 学分: 3.5 / 分数: 83
+课程: Python / 学分: 2 / 分数: 81
+总分为: 417
+
+学号: 10917
+姓名: xingfeng
+性别: Male
+出生日期: 2000/2/4
+学年: 2020
+出生地: jiangsu
+课程: Control Theory / 学分: 2 / 分数: 88
+课程: Advanced math / 学分: 4 / 分数: 77
+课程: C Programming Language / 学分: 3 / 分数: 73
+课程: College English / 学分: 3.5 / 分数: 90
+课程: Python / 学分: 2 / 分数: 72
+总分为: 400
+
+——————————————————————————————
+3. 按照出生日期排序:
+学号: 10921
+姓名: dabin
+性别: Male
+出生日期: 1998/2/6
+学年: 2018
+出生地: hainan
+课程: Control Theory / 学分: 2 / 分数: 90
+课程: Advanced math / 学分: 4 / 分数: 79
+课程: C Programming Language / 学分: 3 / 分数: 83
+课程: College English / 学分: 3.5 / 分数: 81
+总分为: 333
+
+学号: 10905
+姓名: xiaomei
+性别: Female
+出生日期: 1999/2/1
+学年: 2021
+出生地: hunan
+课程: Control Theory / 学分: 2 / 分数: 91
+课程: Advanced math / 学分: 4 / 分数: 53
+课程: C Programming Language / 学分: 3 / 分数: 74
+课程: College English / 学分: 3.5 / 分数: 70
+总分为: 288
+
+学号: 10908
+姓名: jianfa
+性别: Male
+出生日期: 1999/7/2
+学年: 2020
+出生地: hunan
+课程: Control Theory / 学分: 2 / 分数: 85
+课程: Advanced math / 学分: 4 / 分数: 80
+课程: C Programming Language / 学分: 3 / 分数: 56
+课程: College English / 学分: 3.5 / 分数: 80
+课程: Python / 学分: 2 / 分数: 96
+总分为: 397
+
+学号: 10914
+姓名: dahong
+性别: Male
+出生日期: 2000/2/3
+学年: 2021
+出生地: guangdong
+课程: Control Theory / 学分: 2 / 分数: 87
+课程: Advanced math / 学分: 4 / 分数: 70
+课程: C Programming Language / 学分: 3 / 分数: 59
+课程: College English / 学分: 3.5 / 分数: 79
+课程: Python / 学分: 2 / 分数: 69
+总分为: 364
+
+学号: 10917
+姓名: xingfeng
+性别: Male
+出生日期: 2000/2/4
+学年: 2020
+出生地: jiangsu
+课程: Control Theory / 学分: 2 / 分数: 88
+课程: Advanced math / 学分: 4 / 分数: 77
+课程: C Programming Language / 学分: 3 / 分数: 73
+课程: College English / 学分: 3.5 / 分数: 90
+课程: Python / 学分: 2 / 分数: 72
+总分为: 400
+
+学号: 10919
+姓名: xiaomi
+性别: Female
+出生日期: 2001/12/5
+学年: 2019
+出生地: beijing
+课程: Control Theory / 学分: 2 / 分数: 86
+课程: Advanced math / 学分: 4 / 分数: 76
+课程: C Programming Language / 学分: 3 / 分数: 91
+课程: College English / 学分: 3.5 / 分数: 83
+课程: Python / 学分: 2 / 分数: 81
+总分为: 417
+
+——————————————————————————————
+4. 按照入学年份排序:
+学号: 10921
+姓名: dabin
+性别: Male
+出生日期: 1998/2/6
+学年: 2018
+出生地: hainan
+课程: Control Theory / 学分: 2 / 分数: 90
+课程: Advanced math / 学分: 4 / 分数: 79
+课程: C Programming Language / 学分: 3 / 分数: 83
+课程: College English / 学分: 3.5 / 分数: 81
+总分为: 333
+
+学号: 10919
+姓名: xiaomi
+性别: Female
+出生日期: 2001/12/5
+学年: 2019
+出生地: beijing
+课程: Control Theory / 学分: 2 / 分数: 86
+课程: Advanced math / 学分: 4 / 分数: 76
+课程: C Programming Language / 学分: 3 / 分数: 91
+课程: College English / 学分: 3.5 / 分数: 83
+课程: Python / 学分: 2 / 分数: 81
+总分为: 417
+
+学号: 10908
+姓名: jianfa
+性别: Male
+出生日期: 1999/7/2
+学年: 2020
+出生地: hunan
+课程: Control Theory / 学分: 2 / 分数: 85
+课程: Advanced math / 学分: 4 / 分数: 80
+课程: C Programming Language / 学分: 3 / 分数: 56
+课程: College English / 学分: 3.5 / 分数: 80
+课程: Python / 学分: 2 / 分数: 96
+总分为: 397
+
+学号: 10917
+姓名: xingfeng
+性别: Male
+出生日期: 2000/2/4
+学年: 2020
+出生地: jiangsu
+课程: Control Theory / 学分: 2 / 分数: 88
+课程: Advanced math / 学分: 4 / 分数: 77
+课程: C Programming Language / 学分: 3 / 分数: 73
+课程: College English / 学分: 3.5 / 分数: 90
+课程: Python / 学分: 2 / 分数: 72
+总分为: 400
+
+学号: 10905
+姓名: xiaomei
+性别: Female
+出生日期: 1999/2/1
+学年: 2021
+出生地: hunan
+课程: Control Theory / 学分: 2 / 分数: 91
+课程: Advanced math / 学分: 4 / 分数: 53
+课程: C Programming Language / 学分: 3 / 分数: 74
+课程: College English / 学分: 3.5 / 分数: 70
+总分为: 288
+
+学号: 10914
+姓名: dahong
+性别: Male
+出生日期: 2000/2/3
+学年: 2021
+出生地: guangdong
+课程: Control Theory / 学分: 2 / 分数: 87
+课程: Advanced math / 学分: 4 / 分数: 70
+课程: C Programming Language / 学分: 3 / 分数: 59
+课程: College English / 学分: 3.5 / 分数: 79
+课程: Python / 学分: 2 / 分数: 69
+总分为: 364
+
+——————————————————————————————
+5. 按照C Programming Language排序:
+学号: 10919
+姓名: xiaomi
+性别: Female
+出生日期: 2001/12/5
+学年: 2019
+出生地: beijing
+课程: Control Theory / 学分: 2 / 分数: 86
+课程: Advanced math / 学分: 4 / 分数: 76
+课程: C Programming Language / 学分: 3 / 分数: 91
+课程: College English / 学分: 3.5 / 分数: 83
+课程: Python / 学分: 2 / 分数: 81
+总分为: 417
+
+学号: 10921
+姓名: dabin
+性别: Male
+出生日期: 1998/2/6
+学年: 2018
+出生地: hainan
+课程: Control Theory / 学分: 2 / 分数: 90
+课程: Advanced math / 学分: 4 / 分数: 79
+课程: C Programming Language / 学分: 3 / 分数: 83
+课程: College English / 学分: 3.5 / 分数: 81
+总分为: 333
+
+学号: 10905
+姓名: xiaomei
+性别: Female
+出生日期: 1999/2/1
+学年: 2021
+出生地: hunan
+课程: Control Theory / 学分: 2 / 分数: 91
+课程: Advanced math / 学分: 4 / 分数: 53
+课程: C Programming Language / 学分: 3 / 分数: 74
+课程: College English / 学分: 3.5 / 分数: 70
+总分为: 288
+
+学号: 10917
+姓名: xingfeng
+性别: Male
+出生日期: 2000/2/4
+学年: 2020
+出生地: jiangsu
+课程: Control Theory / 学分: 2 / 分数: 88
+课程: Advanced math / 学分: 4 / 分数: 77
+课程: C Programming Language / 学分: 3 / 分数: 73
+课程: College English / 学分: 3.5 / 分数: 90
+课程: Python / 学分: 2 / 分数: 72
+总分为: 400
+
+学号: 10914
+姓名: dahong
+性别: Male
+出生日期: 2000/2/3
+学年: 2021
+出生地: guangdong
+课程: Control Theory / 学分: 2 / 分数: 87
+课程: Advanced math / 学分: 4 / 分数: 70
+课程: C Programming Language / 学分: 3 / 分数: 59
+课程: College English / 学分: 3.5 / 分数: 79
+课程: Python / 学分: 2 / 分数: 69
+总分为: 364
+
+学号: 10908
+姓名: jianfa
+性别: Male
+出生日期: 1999/7/2
+学年: 2020
+出生地: hunan
+课程: Control Theory / 学分: 2 / 分数: 85
+课程: Advanced math / 学分: 4 / 分数: 80
+课程: C Programming Language / 学分: 3 / 分数: 56
+课程: College English / 学分: 3.5 / 分数: 80
+课程: Python / 学分: 2 / 分数: 96
+总分为: 397
+
+——————————————————————————————
+6. 按照Advanced math:
+学号: 10908
+姓名: jianfa
+性别: Male
+出生日期: 1999/7/2
+学年: 2020
+出生地: hunan
+课程: Control Theory / 学分: 2 / 分数: 85
+课程: Advanced math / 学分: 4 / 分数: 80
+课程: C Programming Language / 学分: 3 / 分数: 56
+课程: College English / 学分: 3.5 / 分数: 80
+课程: Python / 学分: 2 / 分数: 96
+总分为: 397
+
+学号: 10921
+姓名: dabin
+性别: Male
+出生日期: 1998/2/6
+学年: 2018
+出生地: hainan
+课程: Control Theory / 学分: 2 / 分数: 90
+课程: Advanced math / 学分: 4 / 分数: 79
+课程: C Programming Language / 学分: 3 / 分数: 83
+课程: College English / 学分: 3.5 / 分数: 81
+总分为: 333
+
+学号: 10917
+姓名: xingfeng
+性别: Male
+出生日期: 2000/2/4
+学年: 2020
+出生地: jiangsu
+课程: Control Theory / 学分: 2 / 分数: 88
+课程: Advanced math / 学分: 4 / 分数: 77
+课程: C Programming Language / 学分: 3 / 分数: 73
+课程: College English / 学分: 3.5 / 分数: 90
+课程: Python / 学分: 2 / 分数: 72
+总分为: 400
+
+学号: 10919
+姓名: xiaomi
+性别: Female
+出生日期: 2001/12/5
+学年: 2019
+出生地: beijing
+课程: Control Theory / 学分: 2 / 分数: 86
+课程: Advanced math / 学分: 4 / 分数: 76
+课程: C Programming Language / 学分: 3 / 分数: 91
+课程: College English / 学分: 3.5 / 分数: 83
+课程: Python / 学分: 2 / 分数: 81
+总分为: 417
+
+学号: 10914
+姓名: dahong
+性别: Male
+出生日期: 2000/2/3
+学年: 2021
+出生地: guangdong
+课程: Control Theory / 学分: 2 / 分数: 87
+课程: Advanced math / 学分: 4 / 分数: 70
+课程: C Programming Language / 学分: 3 / 分数: 59
+课程: College English / 学分: 3.5 / 分数: 79
+课程: Python / 学分: 2 / 分数: 69
+总分为: 364
+
+学号: 10905
+姓名: xiaomei
+性别: Female
+出生日期: 1999/2/1
+学年: 2021
+出生地: hunan
+课程: Control Theory / 学分: 2 / 分数: 91
+课程: Advanced math / 学分: 4 / 分数: 53
+课程: C Programming Language / 学分: 3 / 分数: 74
+课程: College English / 学分: 3.5 / 分数: 70
+总分为: 288
+
+——————————————————————————————
+7. 按照College English排序:
+学号: 10917
+姓名: xingfeng
+性别: Male
+出生日期: 2000/2/4
+学年: 2020
+出生地: jiangsu
+课程: Control Theory / 学分: 2 / 分数: 88
+课程: Advanced math / 学分: 4 / 分数: 77
+课程: C Programming Language / 学分: 3 / 分数: 73
+课程: College English / 学分: 3.5 / 分数: 90
+课程: Python / 学分: 2 / 分数: 72
+总分为: 400
+
+学号: 10919
+姓名: xiaomi
+性别: Female
+出生日期: 2001/12/5
+学年: 2019
+出生地: beijing
+课程: Control Theory / 学分: 2 / 分数: 86
+课程: Advanced math / 学分: 4 / 分数: 76
+课程: C Programming Language / 学分: 3 / 分数: 91
+课程: College English / 学分: 3.5 / 分数: 83
+课程: Python / 学分: 2 / 分数: 81
+总分为: 417
+
+学号: 10921
+姓名: dabin
+性别: Male
+出生日期: 1998/2/6
+学年: 2018
+出生地: hainan
+课程: Control Theory / 学分: 2 / 分数: 90
+课程: Advanced math / 学分: 4 / 分数: 79
+课程: C Programming Language / 学分: 3 / 分数: 83
+课程: College English / 学分: 3.5 / 分数: 81
+总分为: 333
+
+学号: 10908
+姓名: jianfa
+性别: Male
+出生日期: 1999/7/2
+学年: 2020
+出生地: hunan
+课程: Control Theory / 学分: 2 / 分数: 85
+课程: Advanced math / 学分: 4 / 分数: 80
+课程: C Programming Language / 学分: 3 / 分数: 56
+课程: College English / 学分: 3.5 / 分数: 80
+课程: Python / 学分: 2 / 分数: 96
+总分为: 397
+
+学号: 10914
+姓名: dahong
+性别: Male
+出生日期: 2000/2/3
+学年: 2021
+出生地: guangdong
+课程: Control Theory / 学分: 2 / 分数: 87
+课程: Advanced math / 学分: 4 / 分数: 70
+课程: C Programming Language / 学分: 3 / 分数: 59
+课程: College English / 学分: 3.5 / 分数: 79
+课程: Python / 学分: 2 / 分数: 69
+总分为: 364
+
+学号: 10905
+姓名: xiaomei
+性别: Female
+出生日期: 1999/2/1
+学年: 2021
+出生地: hunan
+课程: Control Theory / 学分: 2 / 分数: 91
+课程: Advanced math / 学分: 4 / 分数: 53
+课程: C Programming Language / 学分: 3 / 分数: 74
+课程: College English / 学分: 3.5 / 分数: 70
+总分为: 288
+
+——————————————————————————————
+8. 按照Control Theory排序:
+学号: 10905
+姓名: xiaomei
+性别: Female
+出生日期: 1999/2/1
+学年: 2021
+出生地: hunan
+课程: Control Theory / 学分: 2 / 分数: 91
+课程: Advanced math / 学分: 4 / 分数: 53
+课程: C Programming Language / 学分: 3 / 分数: 74
+课程: College English / 学分: 3.5 / 分数: 70
+总分为: 288
+
+学号: 10921
+姓名: dabin
+性别: Male
+出生日期: 1998/2/6
+学年: 2018
+出生地: hainan
+课程: Control Theory / 学分: 2 / 分数: 90
+课程: Advanced math / 学分: 4 / 分数: 79
+课程: C Programming Language / 学分: 3 / 分数: 83
+课程: College English / 学分: 3.5 / 分数: 81
+总分为: 333
+
+学号: 10917
+姓名: xingfeng
+性别: Male
+出生日期: 2000/2/4
+学年: 2020
+出生地: jiangsu
+课程: Control Theory / 学分: 2 / 分数: 88
+课程: Advanced math / 学分: 4 / 分数: 77
+课程: C Programming Language / 学分: 3 / 分数: 73
+课程: College English / 学分: 3.5 / 分数: 90
+课程: Python / 学分: 2 / 分数: 72
+总分为: 400
+
+学号: 10914
+姓名: dahong
+性别: Male
+出生日期: 2000/2/3
+学年: 2021
+出生地: guangdong
+课程: Control Theory / 学分: 2 / 分数: 87
+课程: Advanced math / 学分: 4 / 分数: 70
+课程: C Programming Language / 学分: 3 / 分数: 59
+课程: College English / 学分: 3.5 / 分数: 79
+课程: Python / 学分: 2 / 分数: 69
+总分为: 364
+
+学号: 10919
+姓名: xiaomi
+性别: Female
+出生日期: 2001/12/5
+学年: 2019
+出生地: beijing
+课程: Control Theory / 学分: 2 / 分数: 86
+课程: Advanced math / 学分: 4 / 分数: 76
+课程: C Programming Language / 学分: 3 / 分数: 91
+课程: College English / 学分: 3.5 / 分数: 83
+课程: Python / 学分: 2 / 分数: 81
+总分为: 417
+
+学号: 10908
+姓名: jianfa
+性别: Male
+出生日期: 1999/7/2
+学年: 2020
+出生地: hunan
+课程: Control Theory / 学分: 2 / 分数: 85
+课程: Advanced math / 学分: 4 / 分数: 80
+课程: C Programming Language / 学分: 3 / 分数: 56
+课程: College English / 学分: 3.5 / 分数: 80
+课程: Python / 学分: 2 / 分数: 96
+总分为: 397
+
+——————————————————————————————
+9. 按照Python排序:
+学号: 10908
+姓名: jianfa
+性别: Male
+出生日期: 1999/7/2
+学年: 2020
+出生地: hunan
+课程: Control Theory / 学分: 2 / 分数: 85
+课程: Advanced math / 学分: 4 / 分数: 80
+课程: C Programming Language / 学分: 3 / 分数: 56
+课程: College English / 学分: 3.5 / 分数: 80
+课程: Python / 学分: 2 / 分数: 96
+总分为: 397
+
+学号: 10919
+姓名: xiaomi
+性别: Female
+出生日期: 2001/12/5
+学年: 2019
+出生地: beijing
+课程: Control Theory / 学分: 2 / 分数: 86
+课程: Advanced math / 学分: 4 / 分数: 76
+课程: C Programming Language / 学分: 3 / 分数: 91
+课程: College English / 学分: 3.5 / 分数: 83
+课程: Python / 学分: 2 / 分数: 81
+总分为: 417
+
+学号: 10917
+姓名: xingfeng
+性别: Male
+出生日期: 2000/2/4
+学年: 2020
+出生地: jiangsu
+课程: Control Theory / 学分: 2 / 分数: 88
+课程: Advanced math / 学分: 4 / 分数: 77
+课程: C Programming Language / 学分: 3 / 分数: 73
+课程: College English / 学分: 3.5 / 分数: 90
+课程: Python / 学分: 2 / 分数: 72
+总分为: 400
+
+学号: 10914
+姓名: dahong
+性别: Male
+出生日期: 2000/2/3
+学年: 2021
+出生地: guangdong
+课程: Control Theory / 学分: 2 / 分数: 87
+课程: Advanced math / 学分: 4 / 分数: 70
+课程: C Programming Language / 学分: 3 / 分数: 59
+课程: College English / 学分: 3.5 / 分数: 79
+课程: Python / 学分: 2 / 分数: 69
+总分为: 364
+
+学号: 10905
+姓名: xiaomei
+性别: Female
+出生日期: 1999/2/1
+学年: 2021
+出生地: hunan
+课程: Control Theory / 学分: 2 / 分数: 91
+课程: Advanced math / 学分: 4 / 分数: 53
+课程: C Programming Language / 学分: 3 / 分数: 74
+课程: College English / 学分: 3.5 / 分数: 70
+总分为: 288
+
+学号: 10921
+姓名: dabin
+性别: Male
+出生日期: 1998/2/6
+学年: 2018
+出生地: hainan
+课程: Control Theory / 学分: 2 / 分数: 90
+课程: Advanced math / 学分: 4 / 分数: 79
+课程: C Programming Language / 学分: 3 / 分数: 83
+课程: College English / 学分: 3.5 / 分数: 81
+总分为: 333
+
+——————————————————————————————
+10. 按照总分排序:
+学号: 10919
+姓名: xiaomi
+性别: Female
+出生日期: 2001/12/5
+学年: 2019
+出生地: beijing
+课程: Control Theory / 学分: 2 / 分数: 86
+课程: Advanced math / 学分: 4 / 分数: 76
+课程: C Programming Language / 学分: 3 / 分数: 91
+课程: College English / 学分: 3.5 / 分数: 83
+课程: Python / 学分: 2 / 分数: 81
+总分为: 417
+
+学号: 10917
+姓名: xingfeng
+性别: Male
+出生日期: 2000/2/4
+学年: 2020
+出生地: jiangsu
+课程: Control Theory / 学分: 2 / 分数: 88
+课程: Advanced math / 学分: 4 / 分数: 77
+课程: C Programming Language / 学分: 3 / 分数: 73
+课程: College English / 学分: 3.5 / 分数: 90
+课程: Python / 学分: 2 / 分数: 72
+总分为: 400
+
+学号: 10908
+姓名: jianfa
+性别: Male
+出生日期: 1999/7/2
+学年: 2020
+出生地: hunan
+课程: Control Theory / 学分: 2 / 分数: 85
+课程: Advanced math / 学分: 4 / 分数: 80
+课程: C Programming Language / 学分: 3 / 分数: 56
+课程: College English / 学分: 3.5 / 分数: 80
+课程: Python / 学分: 2 / 分数: 96
+总分为: 397
+
+学号: 10914
+姓名: dahong
+性别: Male
+出生日期: 2000/2/3
+学年: 2021
+出生地: guangdong
+课程: Control Theory / 学分: 2 / 分数: 87
+课程: Advanced math / 学分: 4 / 分数: 70
+课程: C Programming Language / 学分: 3 / 分数: 59
+课程: College English / 学分: 3.5 / 分数: 79
+课程: Python / 学分: 2 / 分数: 69
+总分为: 364
+
+学号: 10921
+姓名: dabin
+性别: Male
+出生日期: 1998/2/6
+学年: 2018
+出生地: hainan
+课程: Control Theory / 学分: 2 / 分数: 90
+课程: Advanced math / 学分: 4 / 分数: 79
+课程: C Programming Language / 学分: 3 / 分数: 83
+课程: College English / 学分: 3.5 / 分数: 81
+总分为: 333
+
+学号: 10905
+姓名: xiaomei
+性别: Female
+出生日期: 1999/2/1
+学年: 2021
+出生地: hunan
+课程: Control Theory / 学分: 2 / 分数: 91
+课程: Advanced math / 学分: 4 / 分数: 53
+课程: C Programming Language / 学分: 3 / 分数: 74
+课程: College English / 学分: 3.5 / 分数: 70
+总分为: 288
+
+——————————————————————————————
+@————展示范围查询功能（如果有多个条目，默认按照 id 排序）————@
+C Programming Language 在 0 到 60 分数段的人有:
+10908 / jianfa / 56分
+10914 / dahong / 59分
+
+College English 在 80 到 90 分数段的人有:
+10908 / jianfa / 80分
+10917 / xingfeng / 90分
+10919 / xiaomi / 83分
+10921 / dabin / 81分
+
+@————展示多条件查询和删除功能（如果有多个条目，默认按照 id 排序）————@
+----测试样例(1): 查询性别为男且出生在2000年及之后的学生----
+学号: 10914
+姓名: dahong
+性别: Male
+出生日期: 2000/2/3
+学年: 2021
+出生地: guangdong
+课程: Control Theory / 学分: 2 / 分数: 87
+课程: Advanced math / 学分: 4 / 分数: 70
+课程: C Programming Language / 学分: 3 / 分数: 59
+课程: College English / 学分: 3.5 / 分数: 79
+课程: Python / 学分: 2 / 分数: 69
+总分为: 364
+
+学号: 10917
+姓名: xingfeng
+性别: Male
+出生日期: 2000/2/4
+学年: 2020
+出生地: jiangsu
+课程: Control Theory / 学分: 2 / 分数: 88
+课程: Advanced math / 学分: 4 / 分数: 77
+课程: C Programming Language / 学分: 3 / 分数: 73
+课程: College English / 学分: 3.5 / 分数: 90
+课程: Python / 学分: 2 / 分数: 72
+总分为: 400
+
+----测试样例(2): 查询性别为女且C++或大学英语成绩不低于90分的学生----
+学号: 10919
+姓名: xiaomi
+性别: Female
+出生日期: 2001/12/5
+学年: 2019
+出生地: beijing
+课程: Control Theory / 学分: 2 / 分数: 86
+课程: Advanced math / 学分: 4 / 分数: 76
+课程: C Programming Language / 学分: 3 / 分数: 91
+课程: College English / 学分: 3.5 / 分数: 83
+课程: Python / 学分: 2 / 分数: 81
+总分为: 417
+
+----测试样例(3): 删除所有女生和出生在2月的男生, 并调用PrintAll()查看删除情况----
+学号: 10908
+姓名: jianfa
+性别: Male
+出生日期: 1999/7/2
+学年: 2020
+出生地: hunan
+课程: Control Theory / 学分: 2 / 分数: 85
+课程: Advanced math / 学分: 4 / 分数: 80
+课程: C Programming Language / 学分: 3 / 分数: 56
+课程: College English / 学分: 3.5 / 分数: 80
+课程: Python / 学分: 2 / 分数: 96
+总分为: 397
+
+
+Y:\Desktop\C++期末\student\Student\Debug\Student.exe (进程 12712)已退出，代码为 0。

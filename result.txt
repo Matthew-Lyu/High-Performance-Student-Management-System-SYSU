@@ -1,0 +1,13 @@
+a) 选修 C Program Course且成绩小于 60 分的学生
+10908 jianfa 2020级 56分
+b) 课程平均分大于 80 的学生
+10917 xingfeng 平均分80.1379
+10919 xiaomi 平均分82.8621
+10921 dabin 平均分82.28
+c) 查询每个学生是否修满 20 学分
+10905 xiaomei No
+10908 jianfa No
+10914 dahong No
+10917 xingfeng No
+10919 xiaomi No
+10921 dabin No
