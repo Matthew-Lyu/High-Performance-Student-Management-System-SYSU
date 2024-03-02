@@ -4,7 +4,7 @@ This is a  C++ program for managing student information, including personal deta
 
 ## Project Background
 
-This documentation outlines the completion of the third assignment for the C++ course design in the School of Intelligent Engineering at Sun Yat-sen University for the academic year 2022. The project aims to develop a comprehensive student management system, providing functionalities for organizing and analyzing student information.
+This documentation outlines the completion of the third assignment for the C++ course design in the School of Intelligent Engineering at Sun Yat-sen University for the academic year 2022. The project aims to develop a comprehensive student management system, providing functionalities for organizing and analyzing student information
 
 ![image-20231111093654972](https://p.ipic.vip/eu8gdn.png)
 
