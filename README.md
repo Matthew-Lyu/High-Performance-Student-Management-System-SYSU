@@ -274,4 +274,4 @@ int main() {
 
 Feel free to modify and adapt the program to suit your needs.
 
-Contact with me if you have any questions.🥰
+Contact with me if you have any questions.
